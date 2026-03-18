@@ -1,0 +1,67 @@
+### AI Codebase Intelligence — API Test File
+### Install "REST Client" extension in VS Code, then click "Send Request"
+
+@base = http://localhost:8000
+
+# ─────────────────────────────────────────
+### 1. Health Check
+GET {{base}}/health
+
+###
+
+### 2. Root
+GET {{base}}/
+
+###
+
+### 3. Ingest a Repository
+POST {{base}}/api/ingest-repo
+Content-Type: application/json
+
+{
+  "repo_url": "https://github.com/pallets/flask",
+  "force": false
+}
+
+###
+
+### 4. Check Repo Status  (replace repo_id with what step 3 returned)
+GET {{base}}/api/repo-status/pallets__flask
+
+###
+
+### 5. Ask a Question
+POST {{base}}/api/ask-question
+Content-Type: application/json
+
+{
+  "repo_id": "pallets__flask",
+  "question": "How does routing work in Flask?"
+}
+
+###
+
+### 6. Trace Execution Flow
+POST {{base}}/api/trace-flow
+Content-Type: application/json
+
+{
+  "repo_id": "pallets__flask",
+  "entry_function": "full_dispatch_request",
+  "max_depth": 5
+}
+
+###
+
+### 7. Architecture Overview
+GET {{base}}/api/get-architecture/pallets__flask
+
+###
+
+### 8. List All Functions
+GET {{base}}/api/list-functions/pallets__flask?limit=30
+
+###
+
+### 9. Reload Session (after server restart)
+POST {{base}}/api/reload-session/pallets__flask

@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.pylance",
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+    "ms-python.debugpy",
+    "humao.rest-client",
+    "GitHub.vscode-pull-request-github",
+    "eamodio.gitlens"
+  ]
+}

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ai-codebase-intelligence"
+version = "1.0.0"
+description = "AI system that understands any GitHub repository like a senior engineer."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths   = ["tests"]
+addopts     = "-v --tb=short"
+
+[tool.setuptools.packages.find]
+where = ["."]
