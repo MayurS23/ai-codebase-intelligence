@@ -1,4 +1,4 @@
-# 🧠 AI Codebase Intelligence Platform
+#  AI Codebase Intelligence Platform
 
 <div align="center">
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📌 What Is This?
+##  What Is This?
 
 The **AI Codebase Intelligence Platform** is a developer tool that combines **Retrieval Augmented Generation (RAG)**, **static code analysis**, **call graph generation**, and **LLM reasoning** to help developers understand large, complex codebases instantly.
 
@@ -34,24 +34,24 @@ The system answers like a senior engineer who has deeply studied the codebase.
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Description |
 |---|---|
-| 🔍 **Codebase Q&A** | Ask any natural language question about any GitHub repo |
-| 🔗 **Execution Flow Tracing** | Trace how execution flows from any entry function |
-| 🏗 **Architecture Analysis** | Get a high-level overview of the entire system design |
-| 📊 **Call Graph Builder** | Visualize which functions call which other functions |
-| 🗺 **Dependency Graph** | See how files and modules depend on each other |
-| 🌐 **Multi-Language Support** | Python, JavaScript, TypeScript, Java, Go, Rust, C++, C#, Ruby, PHP, Kotlin, Swift |
-| 💾 **Persistent Indexing** | Index once, query forever — no re-processing needed |
-| ⚡ **Semantic Search** | Finds relevant code even when exact keywords don't match |
-| 🔄 **Session Recovery** | Restore your session after server restart without re-embedding |
-| 🐳 **Docker Support** | One command to run everything |
+|  **Codebase Q&A** | Ask any natural language question about any GitHub repo |
+|  **Execution Flow Tracing** | Trace how execution flows from any entry function |
+|  **Architecture Analysis** | Get a high-level overview of the entire system design |
+|  **Call Graph Builder** | Visualize which functions call which other functions |
+|  **Dependency Graph** | See how files and modules depend on each other |
+|  **Multi-Language Support** | Python, JavaScript, TypeScript, Java, Go, Rust, C++, C#, Ruby, PHP, Kotlin, Swift |
+|  **Persistent Indexing** | Index once, query forever — no re-processing needed |
+|  **Semantic Search** | Finds relevant code even when exact keywords don't match |
+|  **Session Recovery** | Restore your session after server restart without re-embedding |
+|  **Docker Support** | One command to run everything |
 
 ---
 
-## 🖥 How It Works
+##  How It Works
 
 ```
 You paste a GitHub URL
@@ -83,7 +83,7 @@ You get a precise, developer-quality answer with source file references
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -99,64 +99,64 @@ You get a precise, developer-quality answer with source file references
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ai-codebase-intelligence/
 │
-├── 📂 backend/                        # FastAPI backend
+├──  backend/                          # FastAPI backend
 │   ├── main.py                        # App entry point
 │   ├── config.py                      # All configuration via .env
 │   │
-│   ├── 📂 ingestion/
+│   ├──  ingestion/
 │   │   ├── repo_cloner.py             # Clone GitHub repos
 │   │   ├── file_scanner.py            # Walk dirs, detect code files
 │   │   └── ingestion_orchestrator.py  # Full pipeline coordinator
 │   │
-│   ├── 📂 parsing/
+│   ├──  parsing/
 │   │   ├── code_unit.py               # Core data model (CodeUnit)
 │   │   ├── python_parser.py           # Python AST parser
 │   │   ├── generic_parser.py          # Regex parser for other languages
 │   │   └── parser_dispatcher.py       # Routes files to correct parser
 │   │
-│   ├── 📂 chunking/
+│   ├──  chunking/
 │   │   └── smart_chunker.py           # Function/class-level chunking
 │   │
-│   ├── 📂 embeddings/
+│   ├──  embeddings/
 │   │   ├── embedding_model.py         # OpenAI + local fallback model
 │   │   └── embedding_pipeline.py      # Batch embedding processor
 │   │
-│   ├── 📂 vectordb/
+│   ├──  vectordb/
 │   │   └── chroma_store.py            # ChromaDB store & search
 │   │
-│   ├── 📂 retrieval/
+│   ├──  retrieval/
 │   │   └── retrieval_engine.py        # Semantic search + re-ranking
 │   │
-│   ├── 📂 graphs/
+│   ├──  graphs/
 │   │   ├── call_graph.py              # Function call relationships
 │   │   └── dependency_graph.py        # File/module dependencies
 │   │
-│   ├── 📂 flow_tracer/
+│   ├──  flow_tracer/
 │   │   └── execution_tracer.py        # BFS execution path tracer
 │   │
-│   ├── 📂 llm/
+│   ├──  llm/
 │   │   ├── llm_client.py              # Claude API wrapper
 │   │   ├── prompt_builder.py          # Structured prompt templates
 │   │   └── reasoning_engine.py        # Orchestrates RAG + LLM
 │   │
-│   └── 📂 api/
+│   └──  api/
 │       ├── session_cache.py           # In-memory session store
-│       ├── 📂 routes/
+│       ├──  routes/
 │       │   ├── ingest.py              # POST /ingest-repo
 │       │   ├── query.py               # POST /ask-question, /trace-flow
 │       │   └── architecture.py        # GET /get-architecture, /repo-status
-│       └── 📂 models/
+│       └──  models/
 │           └── schemas.py             # Pydantic request/response models
 │
-├── 📂 frontend/
+├──  frontend/
 │   └── app.py                         # Streamlit UI (4 tabs)
 │
-├── 📂 tests/                          # 50 tests — all passing
+├──  tests/                          # 50 tests — all passing
 │   ├── conftest.py                    # Shared fixtures
 │   ├── test_api.py                    # FastAPI endpoint tests
 │   ├── test_parsing.py                # Parser tests
@@ -167,11 +167,11 @@ ai-codebase-intelligence/
 │   ├── test_ingestion.py              # Full pipeline integration tests
 │   └── test_flow_tracer.py            # Execution tracer tests
 │
-├── 📂 docker/
+├──  docker/
 │   ├── Dockerfile
 │   └── docker-compose.yml
 │
-├── 📂 .vscode/                        # VS Code launch configs
+├──  .vscode/                        # VS Code launch configs
 │   ├── settings.json
 │   ├── launch.json                    # One-click run backend/frontend/tests
 │   └── extensions.json                # Recommended extensions
@@ -188,7 +188,7 @@ ai-codebase-intelligence/
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 Before you begin, make sure you have the following installed:
 
@@ -211,7 +211,7 @@ You should see version numbers. If not, install them from the links above.
 
 ---
 
-## 🔑 API Keys Required
+##  API Keys Required
 
 You need **at least one** of the following:
 
@@ -226,7 +226,7 @@ Set `EMBEDDING_PROVIDER=local` in your `.env` file. The system will use a built-
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Step 1 — Clone the Repository
 
@@ -242,10 +242,10 @@ setup.bat
 ```
 
 This will automatically:
-- ✅ Create a Python virtual environment (`.venv`)
-- ✅ Install all dependencies from `requirements.txt`
-- ✅ Create your `.env` file from the template
-- ✅ Create required data directories
+-  Create a Python virtual environment (`.venv`)
+-  Install all dependencies from `requirements.txt`
+-  Create your `.env` file from the template
+-  Create required data directories
 
 ### Step 3 — Configure Your API Keys
 
@@ -285,11 +285,11 @@ You should see:
 50 passed in ~11s
 ```
 
-If all 50 tests pass, your installation is complete. ✅
+If all 50 tests pass, your installation is complete. 
 
 ---
 
-## ▶️ Running the Application
+##  Running the Application
 
 You need **two terminals** open at the same time.
 
@@ -325,7 +325,7 @@ Go to **`http://localhost:8501`** in your browser. 🎉
 
 ---
 
-## 💻 Using the Application
+##  Using the Application
 
 ### 1. Ingest a Repository
 
@@ -334,11 +334,11 @@ In the sidebar on the left:
    ```
    https://github.com/pallets/flask
    ```
-2. Click **🚀 Ingest Repository**
+2. Click ** Ingest Repository**
 3. Wait for processing (1–5 minutes depending on repo size)
 4. You'll see metrics: files scanned, units parsed, chunks stored
 
-### 2. Ask Questions (Tab 1 — 💬 Ask Questions)
+### 2. Ask Questions (Tab 1 —  Ask Questions)
 
 Type any question about the codebase:
 
@@ -355,7 +355,7 @@ The system will return:
 - The source files it used to generate the answer
 - Call graph context
 
-### 3. Trace Execution Flow (Tab 2 — 🔍 Trace Flow)
+### 3. Trace Execution Flow (Tab 2 —  Trace Flow)
 
 Enter a function name like `full_dispatch_request` and click **Trace Flow**.
 
@@ -367,7 +367,7 @@ You'll see the complete execution path:
       → view_function  [views.py]
 ```
 
-### 4. Architecture Overview (Tab 3 — 🏗 Architecture)
+### 4. Architecture Overview (Tab 3 —  Architecture)
 
 Click **Generate Architecture Analysis** to get a full system overview including:
 - What kind of application it is
@@ -376,7 +376,7 @@ Click **Generate Architecture Analysis** to get a full system overview including
 - Entry points
 - Design patterns used
 
-### 5. Graph Explorer (Tab 4 — 🗺 Graph Explorer)
+### 5. Graph Explorer (Tab 4 —  Graph Explorer)
 
 Visualize the codebase as an interactive graph:
 - **Dependency Graph** — which files import which files
@@ -384,7 +384,7 @@ Visualize the codebase as an interactive graph:
 
 ---
 
-## 🌐 API Reference
+##  API Reference
 
 The full interactive API docs are available at `http://localhost:8000/docs` when the backend is running.
 
@@ -455,7 +455,7 @@ List all known functions in the indexed repo.
 
 ---
 
-## 🐳 Running with Docker
+##  Running with Docker
 
 If you have Docker installed, you can run the entire application with one command:
 
@@ -475,7 +475,7 @@ docker-compose down
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```cmd
 run_tests.bat
@@ -501,11 +501,11 @@ python -m pytest tests/ -v
 | `test_flow_tracer.py` | Execution tracing, depth limits | 5 |
 | `test_ingestion.py` | File scanner, full pipeline integration | 5 |
 | `test_api.py` | All 7 FastAPI endpoints | 12 |
-| **Total** | | **50 ✅** |
+| **Total** | | **50** |
 
 ---
 
-## 🔧 VS Code Integration
+##  VS Code Integration
 
 This project includes full VS Code configuration.
 
@@ -514,7 +514,7 @@ This project includes full VS Code configuration.
 Open the **Run and Debug** panel (`Ctrl+Shift+D`) and select:
 - **▶ Run FastAPI Backend** — starts the API server with debugger
 - **▶ Run Streamlit Frontend** — starts the UI
-- **🧪 Run All Tests** — runs all 50 tests
+- **Run All Tests** — runs all 50 tests
 
 ### Recommended Extensions
 
@@ -530,7 +530,7 @@ Open `api.http` in VS Code and click **Send Request** above any endpoint to test
 
 ---
 
-## ❓ Troubleshooting
+##  Troubleshooting
 
 ### `ModuleNotFoundError`
 ```cmd
@@ -567,7 +567,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 🗺 Architecture Deep Dive
+##  Architecture Deep Dive
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -632,7 +632,7 @@ Every chunk stored in ChromaDB carries: file path, function name, start/end line
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Here's how:
 
@@ -652,7 +652,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Mayur S**
 GitHub: [@MayurS23](https://github.com/MayurS23)
@@ -663,6 +663,8 @@ GitHub: [@MayurS23](https://github.com/MayurS23)
 
 **If this project helped you, please give it a ⭐ on GitHub!**
 
-Built with ❤️ using Python, FastAPI, Claude AI, and ChromaDB
 
+</div>
+<div align="center">
+Built with ❤️ by <a href="https://github.com/MayurS23">MayurS23</a>
 </div>
